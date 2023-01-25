@@ -26,6 +26,12 @@ session_start();
 
                 <form action="traitConnexion.php" method="POST" id="myForm">
                     <div class="input-control">
+                        <?php 
+                        $fullUrl = "http//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                        if (strpos($fullUrl, "incorrect") == true) {
+                            echo "<div class='error' style='font-size:16px'><p>mail ou mot de passe incorrect !</p></div>";
+                        }
+                        ?>
                         <input type="text" class="nom-util inp" placeholder="E-mail" name="mail" id="mail">
                         <div class="error"></div>
                     </div>

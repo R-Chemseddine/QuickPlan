@@ -23,7 +23,7 @@ if ($_POST["mail"] == "julien@gmail.com" && $_POST["mdp"] == "chems est le meill
 		$_SESSION["mail"] = $_POST["mail"];
 	
 	} else {
-		header("Location:connect.php");
+		header("Location:connect.php?incorrect");
 		$_SESSION["connected"] = false;
 	}
 }

@@ -20,8 +20,6 @@ if ($find == false){
 	
 	)");
 	
-	$bdd->exec("delete from dispos where jour < curdate();");
-	
-	header("Location:index.php");
+	header("Location:index.php?done");
 }
 ?>
