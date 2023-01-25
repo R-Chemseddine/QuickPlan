@@ -5,13 +5,13 @@ require("connexion.php");
 $tablogin = $bdd->query("SELECT * FROM equipiers");
 $find = false;
 
-if ($_POST["mail"] == "julien@gmail.com" && $_POST["mdp"] == "chems est le meilleur") {
+if (strtolower($_POST["mail"]) == "julien@gmail.com" && $_POST["mdp"] == "chems est le meilleur") {
 	header("Location:julien.php");
 	$_SESSION["connected"] = true;
 	$_SESSION["mail"] = $_POST["mail"];
 }else{
 	while ($tuple = $tablogin->fetch()) {
-		if ($_POST["mail"] == $tuple["mail"] && $_POST["mdp"] == $tuple["mdp"]) {
+		if (strtolower($_POST["mail"]) == $tuple["mail"] && $_POST["mdp"] == $tuple["mdp"]) {
 			$find = true;
 			break;
 		}
@@ -27,7 +27,4 @@ if ($_POST["mail"] == "julien@gmail.com" && $_POST["mdp"] == "chems est le meill
 		$_SESSION["connected"] = false;
 	}
 }
-
-
-
 ?>

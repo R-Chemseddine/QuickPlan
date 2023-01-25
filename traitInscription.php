@@ -13,12 +13,12 @@ if (empty($_POST['mail']) || empty($_POST['mdp']) || empty($_POST['nom']) || emp
         $find = false;
 
         while ($tuple = $tablogin->fetch()) {
-            if ($_POST["mail"] == $tuple["mail"]) {
+            if (strtolower($_POST["mail"]) == $tuple["mail"]) {
                 header("Location:inscription.php?mailexiste");
                 break;
             }else{
-                $bdd->exec("INSERT INTO equipiers (nom, prenom, mail, mdp) values ('".$_POST["nom"]."', '".$_POST["prenom"]."','".$_POST["mail"]."','".$_POST["mdp"]."')");
-                header("Location:index.php?done");
+                $bdd->exec("INSERT INTO equipiers (nom, prenom, mail, mdp) values ('".$_POST["nom"]."', '".$_POST["prenom"]."','".strtolower($_POST["mail"])."','".$_POST["mdp"]."')");
+                header("Location:connect.php?");
             }
         }
     }
