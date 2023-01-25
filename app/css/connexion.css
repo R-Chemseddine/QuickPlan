@@ -1,0 +1,199 @@
+:root {
+    --couleur-darkred: #d2082a;
+    --couleur-lightcyan: #f8ecdc;
+    --couleur-darkblue: #000038;
+    --couleur-green: #8fbf78;
+    --couleur-white: white;
+    --couleur-black: black;
+  
+    --fontfamily-poppins: "Poppins", sans-serif;
+  }
+  
+  html {
+    overflow-x: hidden;
+  
+    font-family: var(--fontfamily-poppins);
+  }
+  
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    transition: all 200ms ease-in-out;
+  }
+  .flex {
+    display: flex;
+  }
+  .btn {
+    padding: 0.4em 0.8em;
+    background-color: var(--couleur-darkgreen);
+    width: 120px;
+    border: none;
+    cursor: pointer;
+  }
+  .inp {
+    width: 200px;
+    border: none;
+    padding: 0 1em;
+    font-family: var(--fontfamily-poppins);
+  }
+  
+  body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--couleur-lightcyan);
+  }
+  
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vh 90vh;
+  }
+  
+  header {
+    padding: 2rem 5rem;
+    justify-content: space-between;
+  
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  
+  .logo {
+    font-weight: bold;
+    color: var(--couleur-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .connexion {
+    justify-content: center;
+    align-items: center;
+    margin: 0em 4em 0 4em;
+    text-align: center;
+  
+    display: grid;
+  }
+  
+  .text {
+    flex-direction: column;
+  }
+  
+  .nom-util,
+  .mdp,
+  .connect {
+    display: block;
+    margin: 1em 0;
+  }
+  
+  .nom-util,
+  .mdp {
+    width: 400px;
+    height: 25px;
+  }
+  
+  .iden {
+    color: var(--couleur-green);
+  }
+  
+  .section-connect > * {
+    margin: 1em 0;
+  }
+  .section-inscription > * {
+    margin: 1em 0;
+  }
+  
+  .section-connect {
+    grid-row: 1/2;
+
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    
+    box-shadow: 0px 0px 24px 2px rgba(210,8,42,0.23);
+
+    margin-bottom: 2rem;
+  }
+  
+  .section-identif {
+    margin: 2em 0;
+    justify-content: center;
+  
+    grid-row: 3/4;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .connect {
+    color: var(--couleur-darkred);
+    font-family: var(--fontfamily-poppins);
+    border: 2px solid var(--couleur-darkred);
+    width: fit-content;
+
+    font-size: 1rem;
+    display: block;
+  }
+  
+  .inscription {
+    background-color: var(--couleur-darkgreen);
+  }
+  
+  h2 {
+    color: var(--couleur-darkred);
+  }
+  
+  .iden {
+    margin-left: 0.5em;
+  }
+  .fa-eye-slash {
+    display: none;
+  }
+  
+  .red{
+    color: red;
+  }
+  
+  a:hover{
+    color: var(--couleur-darkred);
+  }
+
+  .error{
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+  }
+
+  .flex{
+    display: flex;
+  }
+
+  @media (max-width : 600px) {
+    .layout{
+      display: flex;
+    }
+
+    .nom-util,
+  .mdp {
+    max-width: 300px;
+  }
+  }
+  
+  .center{
+    display : flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .none{
+    display: none;
+  }
