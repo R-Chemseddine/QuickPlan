@@ -13,7 +13,7 @@ session_start();
 </head>
 <body>
     <header>
-        <div class="logo"><img src="Util/Logo_2015_Quick.svg" alt="" width="60px"></div>
+        <a href="index.php" class="logo"><img src="Util/Logo_2015_Quick.svg" alt="" width="60px"></a>
     </header>
 
     <section class="connexion">
