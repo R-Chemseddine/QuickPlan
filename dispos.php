@@ -22,6 +22,12 @@ session_start();
             <h2>Quick Dispos</h2>
 
             <form action="QuickPlan.php" method="POST" id="myForm">
+                <?php 
+                $fullUrl = "http//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                if (strpos($fullUrl, "done") == true) {
+                    echo "<div class='error' style='color:green; text-align:center;font-size:16px'><p>Disponibilité transmise !</p></div>";
+                }
+                ?>  
                 <div class="input-control">
                     <input type="date" id="date" name="date" class="nom-util inp" placeholder="Date de Disponibilité" >
                     <div class="error"></div>

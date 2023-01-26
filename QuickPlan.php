@@ -19,7 +19,7 @@ if ($find == false){
 	
 	)");
 	
-	header("Location:index.php?done");
+	header("Location:dispos.php?done");
 }
 ?>
 <!-- $]WR^e[&pv#y6=qQ -->
